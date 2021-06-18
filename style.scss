@@ -1,0 +1,62 @@
+@mixin hideOnMobile {
+  display: none;
+}
+
+@mixin flexIt($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$iconColor: #dadada;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 15px;
+}
+
+nav {
+  padding: 15px;
+  width: 100%;
+  border-bottom: 1px solid $iconColor;
+}
+
+.icon {
+  color: $iconColor;
+  font-size: 1.15rem;
+}
+
+#desktopNav {
+  @include hideOnMobile();
+}
+
+#desktopLogo {
+  @include hideOnMobile();
+}
+
+#mobileNav {
+  width: 100%;
+  @include flexIt(row, space-between, center);
+}
+
+#searchAcct {
+  @include flexIt(row, space-between, center);
+  width: 15%;
+  position: relative;
+  right: 2rem;
+}
+
+#searchAcct .icon {
+}
+
+.fa-search {
+  transform: rotate(90deg);
+}
