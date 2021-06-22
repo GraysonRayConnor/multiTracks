@@ -301,6 +301,155 @@ nav {
 }
 
 #footer {
+  width: 100%;
   background: #282828;
   color: white;
+  margin: 0 auto;
+  padding: 1rem 0.25rem 0 0.25rem;
+  .footerGroup {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+  .footerGroup:nth-child(1) {
+    margin-top: 3rem;
+  }
+  .footerGroup:nth-child(2) {
+  }
+  .footerItm {
+    text-align: left;
+    width: 75%;
+  }
+
+  #resources {
+    grid-row: 1;
+    grid-column: 2/2;
+  }
+
+  #company {
+    grid-row: 1;
+    grid-column: 2/2;
+    position: relative;
+    top: 9rem;
+  }
+  #account {
+    grid-row: 1;
+    grid-column: 2/2;
+  }
+
+  #extras {
+    position: relative;
+    top: -7rem;
+  }
+  h5 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin: 1.75rem 0 0.75rem 0;
+  }
+  h6 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin: 0;
+  }
+  span {
+    font-size: 1rem;
+    color: #919191;
+    position: relative;
+    top: 8px;
+  }
+  ul {
+    position: relative;
+    bottom: 5px;
+  }
+  li {
+    color: #919191;
+    padding-bottom: 9px;
+  }
+  form {
+    margin: 0 auto 2rem auto;
+  }
+  input[type="text"] {
+    width: 65%;
+    height: 2.5rem;
+    background: #171717;
+    border: 0.5px solid #5c5c5c;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  input[type="submit"] {
+    height: 2.5rem;
+    width: 25%;
+    background: $linkColor;
+    border: none;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #socialIcons {
+    @include flexIt(row, center, center);
+    margin-bottom: 2rem;
+    i {
+      padding: 0.5rem;
+      font-size: 1.75rem;
+    }
+  }
+
+  #socials {
+    position: relative;
+    top: -7rem;
+  }
+
+  #socialBtns {
+    @include flexIt(row, space-between, center);
+    margin: 0 auto;
+    width: 55%;
+  }
+  button {
+    color: white;
+    width: 6rem;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 5px;
+    &:nth-child(1) {
+      background: #456db0;
+    }
+    &:nth-child(2) {
+      background: $linkColor;
+    }
+  }
+
+  #finalNotes {
+    background: #171717;
+    text-align: center;
+    padding: 20px;
+    span:nth-child(1) {
+      font-size: 1.1rem;
+      i {
+        padding: 10px;
+      }
+    }
+    #fnLinks {
+      margin: 0.75rem auto;
+      span {
+        padding: 3px;
+      }
+    }
+    p {
+      color: $lightTextColor;
+      margin: 0 auto;
+      padding-top: 1rem;
+      width: 70%;
+      padding-bottom: 1rem;
+    }
+  }
 }
