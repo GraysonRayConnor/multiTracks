@@ -10,6 +10,9 @@
 }
 
 $iconColor: #dadada;
+$lightTextColor: #828282;
+$linkColor: #43b1e6;
+$lightGreyBg: #fafafa;
 
 html,
 body {
@@ -21,6 +24,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 15px;
+  font-family: "Lato", sans-serif;
 }
 
 nav {
@@ -54,9 +58,249 @@ nav {
   right: 2rem;
 }
 
-#searchAcct .icon {
-}
-
 .fa-search {
   transform: rotate(90deg);
+}
+
+#heroContent {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#myCart {
+  width: 90%;
+  margin: 0 auto;
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+}
+
+.cartItm {
+  border-bottom: 1px solid $iconColor;
+  @include flexIt(row, center, start);
+  padding: 5px;
+  margin-top: 1rem;
+}
+
+.productInfo {
+  @include flexIt(column, space-between, start);
+}
+
+.productType {
+  @include flexIt(row, left, center);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  width: 75%;
+  color: $lightTextColor;
+  img {
+    margin-right: 0.45rem;
+    width: 15%;
+  }
+}
+
+.imgTitleCategory {
+  @include flexIt(row, center, center);
+  width: 100%;
+}
+
+.titleArtist {
+  @include flexIt(column, center, start);
+  text-align: left;
+  font-size: 0.85rem;
+  margin-top: -1rem;
+  width: 100%;
+}
+
+.song {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.artist {
+  color: $lightTextColor;
+}
+
+.removeCreditsSFL {
+  @include flexIt(column, center, left);
+  text-align: right;
+  width: 80%;
+  span {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
+
+.removeBtn {
+  margin-bottom: 2.75rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: $lightTextColor;
+  font-weight: 100;
+  text-align: right;
+}
+
+.sflBtn {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  width: 9rem;
+  padding: 5px;
+  border-radius: 15px;
+  background: transparent;
+  color: $lightTextColor;
+  border: 1px solid $lightTextColor;
+}
+
+.cartItmImg {
+  width: 25%;
+  border-radius: 3px;
+  margin-right: 1rem;
+}
+
+#contShopping {
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  color: $linkColor;
+  margin: 1rem 0 0 1rem;
+}
+
+#orderSummary {
+  background: $lightGreyBg;
+  margin-top: 2rem;
+  width: 100%;
+  h3 {
+    font-size: 1.75rem;
+    margin-left: 1rem;
+    padding-top: 2.5rem;
+  }
+  span {
+    margin-bottom: 1rem;
+  }
+
+  .summaryItm {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  hr {
+    height: 1px;
+    width: 90%;
+    margin-bottom: 1rem;
+    color: $iconColor;
+  }
+
+  .left {
+    font-weight: bold;
+  }
+
+  .right {
+    color: $lightTextColor;
+    button {
+      background: transparent;
+      border: none;
+      text-decoration: underline;
+      margin-top: 1.25rem;
+      color: $linkColor;
+      font-size: 1rem;
+    }
+  }
+
+  .promo {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  #lastFour {
+    color: $lightTextColor;
+    font-weight: 400;
+  }
+}
+
+#credits {
+  @include flexIt(row, space-between, center);
+  div {
+    @include flexIt(column, center, left);
+  }
+}
+
+#subTotalTax {
+  @include flexIt(row, space-between, center);
+  div {
+    @include flexIt(column, center, left);
+  }
+}
+
+#total {
+  @include flexIt(row, space-between, center);
+  div {
+    @include flexIt(column, center, left);
+  }
+}
+
+#payment {
+  @include flexIt(row, space-between, center);
+  div {
+    @include flexIt(column, center, left);
+  }
+}
+
+#order {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5px;
+  span {
+    font-size: 1rem;
+    color: $lightTextColor;
+  }
+  div {
+    @include flexIt(column, center, center);
+    button {
+      margin: 1.5rem 0 1.5rem 0;
+      font-size: 1rem;
+      padding: 15px;
+      width: 90%;
+      border-radius: 30px;
+      font-weight: bold;
+      color: white;
+      background: $linkColor;
+      border: none;
+    }
+  }
+  #legal {
+    width: 85%;
+    text-align: center;
+    line-height: 1.75rem;
+    margin-bottom: 3rem;
+  }
+}
+
+#savedForLater {
+  padding-bottom: 3rem;
+  h4 {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .cartItm {
+    padding-bottom: 2rem;
+  }
+  .cartItm:last-child {
+    border-bottom: none;
+  }
+}
+
+#sflContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.addToCart {
+  margin: -0.65rem 0 0 2.25rem;
+  width: 7rem;
+}
+
+#footer {
+  background: #282828;
+  color: white;
 }

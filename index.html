@@ -8,6 +8,11 @@
       src="https://kit.fontawesome.com/b7f26ca48c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -52,12 +57,197 @@
           </div>
         </div>
       </nav>
+      <!----------------------------------------------------------------->
       <section id="heroContent">
-        <div id="myCart"></div>
-        <div id="orderSummary"></div>
+        <div id="myCart">
+          <h2>My Cart</h2>
+          <div class="cartItm">
+            <div class="productInfo">
+              <div class="imgTitleCategory">
+                <img
+                  class="cartItmImg"
+                  src="assets/cartPic1.png"
+                  alt="product photo"
+                />
+                <div class="titleArtist">
+                  <span class="song">Graves Into Gardens</span>
+                  <span class="artist">Elevation Worship</span>
+                </div>
+              </div>
+              <div class="productType">
+                <img src="assets/mtLogoSmall.png" alt="small mt logo" />
+                <span>MuiltTrack WAV</span>
+              </div>
+            </div>
+            <div class="removeCreditsSFL">
+              <button class="removeBtn">X</button>
+              <span>39 Credits</span>
+              <button class="sflBtn">Save For Later</button>
+            </div>
+          </div>
+          <div class="cartItm">
+            <div class="productInfo">
+              <div class="imgTitleCategory">
+                <img
+                  class="cartItmImg"
+                  src="assets/cartPic2.png"
+                  alt="product photo"
+                />
+                <div class="titleArtist">
+                  <span class="song">Goodness of God</span>
+                  <span class="artist">Bethel Music</span>
+                </div>
+              </div>
+              <div class="productType">
+                <img src="assets/chartIcon.png" alt="small mt logo" />
+                <span>Chart</span>
+              </div>
+            </div>
+            <div class="removeCreditsSFL">
+              <button class="removeBtn">X</button>
+              <span>2 Credits</span>
+              <button class="sflBtn">Save For Later</button>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------------------------------->
+        <button id="contShopping">&#60; Continue shopping</button>
+        <!---------------------------------------------------------------->
+        <div id="orderSummary">
+          <h3>Order Summary</h3>
+            <div class="summaryItm" id="credits">
+              <div class="left">
+              <span>Credits in your account</span>
+              <span>Credits required</span>
+              <span class="promo">Promo Code</span>
+              </div>
+              <div class="right">
+                <span>234</span>
+                <span>241</span>
+                <span class="promo">V</span>
+              </div>
+            </div>
+            <hr>
+            <div class="summaryItm" id="subTotalTax">
+              <div class="left">
+              <span>Subtotal</span>
+              <span>Tax</span>
+            </div>
+            <div class="right">
+              <span>41</span>
+              <span>-</span>
+            </div>
+            </div>
+            <hr>
+            <div class="summaryItm" id="total">
+              <div>
+              <span class="left">TOTAL</span>
+            </div>
+            <div class="right">
+              <span>41</span>
+            </div>
+            </div>
+            <hr>
+            <div class="summaryItm" id="payment">
+              <div class="left">
+              <span>Payment Method</span>
+              <span>American Express<span id="lastFour"> - 1234</span></span>
+            </div>
+            <div class="right"><button>Change</button></div>
+            </div>
+            <hr>
+            <div id="order">
+              <span>All sales are final.</span>
+              <div>
+              <button>PLACE ORDER</button>
+              <span id="legal">By finalizing your order, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
+              </div>
+            </div>
+          </div>
+          <!---------------------------------------------------------------->
+        </div>
       </section>
-      <section id="savedForLater"></section>
-      <footer id="footer"></footer>
+      <section id="savedForLater">
+        <h4>Saved for later</h4>
+        <div id="sflContainer">
+          <div class="cartItm">
+              <div class="productInfo">
+                  <div class="imgTitleCategory">
+                    <img
+                      class="cartItmImg"
+                      src="assets/cartPic3.png"
+                      alt="product photo"
+                    />
+                    <div class="titleArtist">
+                      <span class="song">Forever (Live Version)</span>
+                      <span class="artist">Kari Jobe</span>
+                    </div>
+                  </div>
+                  <div class="productType">
+                    <img src="assets/mtLogoSmall.png" alt="small mt logo" />
+                    <span>MuiltTrack WAV</span>
+                  </div>
+                </div>
+                <div class="removeCreditsSFL">
+                  <button class="removeBtn">X</button>
+                  <button class="sflBtn addToCart">Add To Cart</button>
+                </div>
+          </div>
+          <div class="cartItm">
+              <div class="productInfo">
+                  <div class="imgTitleCategory">
+                    <img
+                      class="cartItmImg"
+                      src="assets/cartPic4.png"
+                      alt="product photo"
+                    />
+                    <div class="titleArtist">
+                      <span class="song">In God We Trust</span>
+                      <span class="artist">Hillsong Worship</span>
+                    </div>
+                  </div>
+                  <div class="productType">
+                    <img src="assets/mtLogoSmall.png" alt="small mt logo" />
+                    <span>MuiltTrack WAV</span>
+                  </div>
+                </div>
+                <div class="removeCreditsSFL">
+                  <button class="removeBtn">X</button>
+                  <button class="sflBtn addToCart">Add To Cart</button>
+                </div>
+          </div>
+          <div class="cartItm">
+              <div class="productInfo">
+                  <div class="imgTitleCategory">
+                    <img
+                      class="cartItmImg"
+                      src="assets/cartPic5.png"
+                      alt="product photo"
+                    />
+                    <div class="titleArtist">
+                      <span class="song">This Is Amazing Grace</span>
+                      <span class="artist">Phil Wickham</span>
+                    </div>
+                  </div>
+                  <div class="productType">
+                    <img src="assets/mtLogoSmall.png" alt="small mt logo" />
+                    <span>MuiltTrack WAV</span>
+                  </div>
+                </div>
+                <div class="removeCreditsSFL">
+                  <button class="removeBtn">X</button>
+                  <button class="sflBtn addToCart">Add To Cart</button>
+                </div>
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <h5>Subscribe to our Newsletter</h5>
+        <form>
+          <input type="text" placeholder="Email Address">
+          <input type="submit">
+        </form>
+      </footer>
     </div>
   </body>
 </html>
