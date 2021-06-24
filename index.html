@@ -16,23 +16,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <nav>
-        <div id="desktopNav">
-          <div id="desktopNavLeft">
+    <!----------------------NAVIGATION------------------------------------------->
+    <nav>
+      <div id="desktopNav">
+        <div id="desktopNavLeft">
           <div id="desktopLogo">
             <img src="assets/mtLogo.png" alt="multi tracks logo" />
             <h1>MultiTracks.com</h1>
           </div>
           <ul>
-            <li><a href="#">Products <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="#">Songs <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="#">Sounds <i class="fas fa-caret-down"></i></a></li>
+            <li>
+              <a href="#">Products <i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Product</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Songs <i class="fas fa-caret-down"></i></a>
+              <ul id="songDropdown">
+                <li><a href="#">Song</a></li>
+                <li><a href="#">Song</a></li>
+                <li><a href="#">Song</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Sounds <i class="fas fa-caret-down"></i></a>
+              <ul id="soundDropdown">
+                <li><a href="#">Sound</a></li>
+                <li><a href="#">Sound</a></li>
+                <li><a href="#">Sound</a></li>
+              </ul>
+            </li>
             <li><a href="#">Pricing</a></li>
-            <li><a href="#">More <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="#">COVID-19</a></li>
+            <li>
+              <a href="#">More <i class="fas fa-caret-down"></i></a>
+              <ul id="moreDropdown">
+                <li><a href="#">More...</a></li>
+              </ul>
+            </li>
+            <li><a id="covid" href="#">COVID-19</a></li>
           </ul>
-          </div>
-          <div id="desktopNavRight">
+        </div>
+        <div id="desktopNavRight">
           <ul>
             <li>
               <a href="#"><i class="far fa-user"></i> Account</a>
@@ -46,208 +73,228 @@
             <li><input type="search" placeholder="Search" /></li>
           </ul>
         </div>
+      </div>
+      <div id="mobileNav">
+        <div id="mobileNavControl">
+          <ul>
+            <li>
+              <i id="mobileNavBtn" class="icon fas fa-ellipsis-h"></i>
+
+              <ul class="mobileNavDropdown">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Songs</a></li>
+                <li><a href="#">Sounds</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">COVID-19</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div id="mobileNav">
-          <i class=" icon fas fa-ellipsis-h"></i>
-          <img
-            id="mobileLogo"
-            src="assets/mtLogo.png"
-            alt="multi tracks logo"
-          />
-          <div id="searchAcct">
-            <i class=" icon fas fa-search"></i>
-            <i class=" icon far fa-user"></i>
-          </div>
+        <img id="mobileLogo" src="assets/mtLogo.png" alt="multi tracks logo" />
+        <div class="searchAcct">
+          <div class="mobileSearch"></div>
+          <i class="searchIcon icon fas fa-search"></i>
+          <i class=" icon far fa-user"></i>
         </div>
-      </nav>
-      <!----------------------------------------------------------------->
-      <section id="heroContent">
-        <div id="myCart">
-          <h2>My Cart</h2>
-          <div class="cartItm">
-            <div class="productInfo">
-              <img src="assets/cartPic1.png" alt="product photo">
-             <div class="artistTitle">
+      </div>
+    </nav>
+    <!----------------------------------------------------------------->
+    <section id="heroContent">
+      <!------------------------MY CART----------------------------------------->
+      <div id="myCart">
+        <h2>My Cart</h2>
+        <div class="cartItm">
+          <div class="productInfo">
+            <img src="assets/cartPic1.png" alt="product photo" />
+            <div class="artistTitle">
               <span>Graves Into Gardens</span>
               <span>Elevation Worship</span>
             </div>
-            </div>
-            <div class="productType">
-              <img src="assets/mtLogoSmall.png" alt="logo">
-              <span>MultiTrack WAV</span>
-            </div>
-            <div class="removeCreditsSFL">
-                <button class="removeBtn">X</button>
-                <span>39 Credits</span>
-                <button class="sflBtn">Save For Later</button>
-                <div class="desktopCartControls">
-                    <button class="desktopRemove">Remove</button>
-                    <span>|</span>
-                    <button class="desktopSFL">Save for later</button>
-                </div>
-              </div>
           </div>
-          <div class="cartItm">
-              <div class="productInfo">
-                <img src="assets/cartPic2.png" alt="product photo">
-               <div class="artistTitle">
-                <span>Goodness of God</span>
-                <span>Bethel Music</span>
-              </div>
-              </div>
-              <div class="productType">
-                <img src="assets/chartIcon.png" alt="logo">
-                <span>Chart</span>
-              </div>
-              <div class="removeCreditsSFL">
-                  <button class="removeBtn">X</button>
-                  <span>2 Credits</span>
-                  <button class="sflBtn">Save For Later</button>
-                  <div class="desktopCartControls">
-                      <button class="desktopRemove">Remove</button>
-                      <span>|</span>
-                      <button class="desktopSFL">Save for later</button>
-                    </div>
-                </div>
-            </div>
-            <button id="contShopping">&#60; Continue shopping</button>
-        </div>
-        <!---------------------------------------------------------------->
-        <!---------------------------------------------------------------->
-        <div id="orderSummary">
-          <h3>Order Summary</h3>
-            <div class="summaryItm" id="credits">
-              <div class="left">
-              <span>Credits in your account</span>
-              <span>Credits required</span>
-              <span class="promo">Promo Code</span>
-              </div>
-              <div class="right">
-                <span>234</span>
-                <span>241</span>
-                <span class="promo"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </div>
-            <hr>
-            <div class="summaryItm" id="subTotalTax">
-              <div class="left">
-              <span>Subtotal</span>
-              <span>Tax</span>
-            </div>
-            <div class="right">
-              <span>41</span>
-              <span>-</span>
-            </div>
-            </div>
-            <hr>
-            <div class="summaryItm" id="total">
-              <div>
-              <span class="left">TOTAL</span>
-            </div>
-            <div class="right">
-              <span>41</span>
-            </div>
-            </div>
-            <hr>
-            <div class="summaryItm" id="payment">
-              <div class="left">
-              <span>Payment Method</span>
-              <span>American Express<span id="lastFour"> - 1234</span></span>
-            </div>
-            <div class="right"><button>Change</button></div>
-            </div>
-            <hr>
-            <div id="order">
-              <span>All sales are final.</span>
-              <div>
-              <button>PLACE ORDER</button>
-              <span id="legal">By finalizing your order, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
-              </div>
+          <div class="productType">
+            <img src="assets/mtLogoSmall.png" alt="logo" />
+            <span>MultiTrack WAV</span>
+          </div>
+          <div class="removeCreditsSFL">
+            <button class="removeBtn">X</button>
+            <span>39 Credits</span>
+            <button class="sflBtn">Save For Later</button>
+            <div class="desktopCartControls">
+              <button class="desktopRemove">Remove</button>
+              <span>|</span>
+              <button class="desktopSFL">Save for later</button>
             </div>
           </div>
-          <!---------------------------------------------------------------->
         </div>
+        <div class="cartItm">
+          <div class="productInfo">
+            <img src="assets/cartPic2.png" alt="product photo" />
+            <div class="artistTitle">
+              <span>Goodness of God</span>
+              <span>Bethel Music</span>
+            </div>
+          </div>
+          <div class="productType">
+            <img src="assets/chartIcon.png" alt="logo" />
+            <span>Chart</span>
+          </div>
+          <div class="removeCreditsSFL">
+            <button class="removeBtn">X</button>
+            <span>2 Credits</span>
+            <button class="sflBtn">Save For Later</button>
+            <div class="desktopCartControls">
+              <button class="desktopRemove">Remove</button>
+              <span>|</span>
+              <button class="desktopSFL">Save for later</button>
+            </div>
+          </div>
+        </div>
+        <button id="contShopping">&#60; Continue shopping</button>
+      </div>
+      <!---------------------------------------------------------------->
+      <!-----------------------------ORDER SUMMARY----------------------------------->
+      <div id="orderSummary">
+        <h3>Order Summary</h3>
+        <div class="summaryItm" id="credits">
+          <div class="left">
+            <span>Credits in your account</span>
+            <span>Credits required</span>
+            <span class="promo">Promo Code</span>
+          </div>
+          <div class="right">
+            <span>234</span>
+            <span>241</span>
+            <span class="promo"><i class="fas fa-chevron-down"></i></span>
+          </div>
+        </div>
+        <hr />
+        <div class="summaryItm" id="subTotalTax">
+          <div class="left">
+            <span>Subtotal</span>
+            <span>Tax</span>
+          </div>
+          <div class="right">
+            <span>41</span>
+            <span>-</span>
+          </div>
+        </div>
+        <hr />
+        <div class="summaryItm" id="total">
+          <div>
+            <span class="left">TOTAL</span>
+          </div>
+          <div class="right">
+            <span>41</span>
+          </div>
+        </div>
+        <hr />
+        <div class="summaryItm" id="payment">
+          <div class="left">
+            <span>Payment Method</span>
+            <span>American Express<span id="lastFour"> - 1234</span></span>
+          </div>
+          <div class="right"><button>Change</button></div>
+        </div>
+        <hr />
+        <div id="order">
+          <span>All sales are final.</span>
+          <div>
+            <button>PLACE ORDER</button>
+            <span id="legal"
+              >By finalizing your order, you agree to the
+              <a href="#">Terms of Use</a> and
+              <a href="#">Privacy Policy</a></span
+            >
+          </div>
+        </div>
+      </div>
+      <!---------------------------------------------------------------->
+
+      <!-------------------------SAVE FOR LATER---------------------------------------->
       <section id="savedForLater">
         <h4>Saved for later</h4>
         <div id="sflContainer">
-            <div class="cartItm">
-                <div class="productInfo">
-                  <img src="assets/cartPic3.png" alt="product photo">
-                 <div class="artistTitle">
-                  <span>Forever (Live Version)</span>
-                  <span>Kari Job</span>
-                </div>
-                </div>
-                <div class="productType">
-                  <img src="assets/mtLogoSmall.png" alt="logo">
-                  <span>MultiTrack WAV</span>
-                </div>
-                <div class="removeCreditsSFL">
-                    <button class="removeBtn">X</button>
-                    <button class="sflBtn">Add To Cart</button>
-                  </div>
-                  <div class="desktopSFLControls">
-                    <button>Remove</button>
-                    <button>Add To Cart</button>
-                  </div>
+          <div class="cartItm">
+            <div class="productInfo">
+              <img src="assets/cartPic3.png" alt="product photo" />
+              <div class="artistTitle">
+                <span>Forever (Live Version)</span>
+                <span>Kari Job</span>
               </div>
-              <div class="cartItm">
-                  <div class="productInfo">
-                    <img src="assets/cartPic4.png" alt="product photo">
-                   <div class="artistTitle">
-                    <span>In God We Trust</span>
-                    <span>Hillsong Worship</span>
-                  </div>
-                  </div>
-                  <div class="productType">
-                    <img src="assets/mtLogoSmall.png" alt="logo">
-                    <span>MultiTrack WAV</span>
-                  </div>
-                  <div class="removeCreditsSFL">
-                      <button class="removeBtn">X</button>
-                      <button class="sflBtn">Add To Cart</button>
-                    </div>
-                    <div class="desktopSFLControls">
-                        <button>Remove</button>
-                        <button>Add To Cart</button>
-                      </div>
-                </div>
-                <div class="cartItm">
-                    <div class="productInfo">
-                      <img src="assets/cartPic5.png" alt="product photo">
-                     <div class="artistTitle">
-                      <span>This Is Amazing Grace</span>
-                      <span>Phil Wickham</span>
-                    </div>
-                    </div>
-                    <div class="productType">
-                      <img src="assets/mtLogoSmall.png" alt="logo">
-                      <span>MultiTrack WAV</span>
-                    </div>
-                    <div class="removeCreditsSFL">
-                        <button class="removeBtn">X</button>
-                        <button class="sflBtn">Add To Cart</button>
-                      </div>
-                      <div class="desktopSFLControls">
-                          <button>Remove</button>
-                          <button>Add To Cart</button>
-                        </div>
-                  </div>
+            </div>
+            <div class="productType">
+              <img src="assets/mtLogoSmall.png" alt="logo" />
+              <span>MultiTrack WAV</span>
+            </div>
+            <div class="removeCreditsSFL">
+              <button class="removeBtn">X</button>
+              <button class="sflBtn">Add To Cart</button>
+            </div>
+            <div class="desktopSFLControls">
+              <button>Remove</button>
+              <button>Add To Cart</button>
+            </div>
+          </div>
+          <div class="cartItm">
+            <div class="productInfo">
+              <img src="assets/cartPic4.png" alt="product photo" />
+              <div class="artistTitle">
+                <span>In God We Trust</span>
+                <span>Hillsong Worship</span>
+              </div>
+            </div>
+            <div class="productType">
+              <img src="assets/mtLogoSmall.png" alt="logo" />
+              <span>MultiTrack WAV</span>
+            </div>
+            <div class="removeCreditsSFL">
+              <button class="removeBtn">X</button>
+              <button class="sflBtn">Add To Cart</button>
+            </div>
+            <div class="desktopSFLControls">
+              <button>Remove</button>
+              <button>Add To Cart</button>
+            </div>
+          </div>
+          <div class="cartItm">
+            <div class="productInfo">
+              <img src="assets/cartPic5.png" alt="product photo" />
+              <div class="artistTitle">
+                <span>This Is Amazing Grace</span>
+                <span>Phil Wickham</span>
+              </div>
+            </div>
+            <div class="productType">
+              <img src="assets/mtLogoSmall.png" alt="logo" />
+              <span>MultiTrack WAV</span>
+            </div>
+            <div class="removeCreditsSFL">
+              <button class="removeBtn">X</button>
+              <button class="sflBtn">Add To Cart</button>
+            </div>
+            <div class="desktopSFLControls">
+              <button>Remove</button>
+              <button>Add To Cart</button>
+            </div>
+          </div>
         </div>
       </section>
+      <!----------------------------------------------------------------->
     </section>
-      <footer id="footer">
-        <div id="subscribeCTA">
+    <!----------------------FOOTER------------------------------------------->
+    <footer id="footer">
+      <div id="subscribeCTA">
         <h5>Subscribe to our Newsletter</h5>
         <form>
-          <input type="text" placeholder="Email Address">
-          <input type="submit" value="Subscribe">
+          <input type="text" placeholder="Email Address" />
+          <input type="submit" value="Subscribe" />
         </form>
         <h6>Have a Problem?</h6>
         <span>View FAQs or Contact our Support Team &#62;</span>
       </div>
       <div id="footerItms">
-          <div class="footerGroup">
+        <div class="footerGroup">
           <div class="footerItm" id="products">
             <h6>Products</h6>
             <ul>
@@ -285,71 +332,75 @@
           </div>
         </div>
         <div class="footerGroup">
-            <div class="footerItm" id="store">
-              <h6>Store</h6>
-              <ul>
-                <li>Buy Credits</li>
-                <li>Free Content</li>
-                <li>Request a Song</li>
-              </ul>
-            </div>
-            <div class="footerItm" id="extras">
-              <h6>Extras</h6>
-              <ul>
-                <li>Sessions</li>
-                <li>Testimonials</li>
-                <li>Submit your content</li>
-              </ul>
-            </div>
-            <div class="footerItm" id="account">
-              <h6>Account</h6>
-              <ul>
-                <li>View Cart</li>
-                <li>Organization</li>
-                <li>My Profile</li>
-                <li>Library</li>
-                <li>Setlists</li>
-                <li>RehearsalMix</li>
-                <li>Custom Session</li>
-              </ul>
-            </div>
+          <div class="footerItm" id="store">
+            <h6>Store</h6>
+            <ul>
+              <li>Buy Credits</li>
+              <li>Free Content</li>
+              <li>Request a Song</li>
+            </ul>
+          </div>
+          <div class="footerItm" id="extras">
+            <h6>Extras</h6>
+            <ul>
+              <li>Sessions</li>
+              <li>Testimonials</li>
+              <li>Submit your content</li>
+            </ul>
+          </div>
+          <div class="footerItm" id="account">
+            <h6>Account</h6>
+            <ul>
+              <li>View Cart</li>
+              <li>Organization</li>
+              <li>My Profile</li>
+              <li>Library</li>
+              <li>Setlists</li>
+              <li>RehearsalMix</li>
+              <li>Custom Session</li>
+            </ul>
           </div>
         </div>
-        <div id="socials">
-          <div id="socialIcons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-            </div>
-            <div id="socialBtns">
-              <button><i class="fas fa-thumbs-up"></i>Like 25K</button>
-              <button><i class="fab fa-twitter"></i>Follow</button>
-            </div>
-        </div>
-      </footer>
-      <div id="finalNotes">
-        <span id="language"><i class="fas fa-globe"></i>English<i class="fas fa-caret-down"></i></span>
-        <div id="fnLinks">
-          <span>Terms</span>
-          <span>|</span>
-          <span>Privacy</span>
-          <span>|</span>
-          <span>Contact</span>
-        </div>
-        <p>&copy;2006-2021 MultiTracks.com LLC. All Rights Reserved</p>
       </div>
+      <div id="socials">
+        <div id="socialIcons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div id="socialBtns">
+          <button><i class="fas fa-thumbs-up"></i>Like 25K</button>
+          <button><i class="fab fa-twitter"></i>Follow</button>
+        </div>
+      </div>
+    </footer>
+    <div id="finalNotes">
+      <span id="language"
+        ><i class="fas fa-globe"></i>English<i class="fas fa-caret-down"></i
+      ></span>
+      <div id="fnLinks">
+        <span>Terms</span>
+        <span>|</span>
+        <span>Privacy</span>
+        <span>|</span>
+        <span>Contact</span>
+      </div>
+      <p>&copy;2006-2021 MultiTracks.com LLC. All Rights Reserved</p>
     </div>
-    <!--<div id="stickyFooter">
+    <!----------------------------------------------------------------->
+    <!-------------------STICKY FOOTER---------------------------------------------->
+    <div id="stickyFooter">
       <div id="stickyContentContainer">
-      <div id="totalCredits">
-        <span>TOTAL</span>
-        <span>41 Credits</span>
-      </div>
-      <div id="placeOrder">
-        <button>PLACE ORDER</button>
+        <div id="totalCredits">
+          <span>TOTAL</span>
+          <span>41 Credits</span>
+        </div>
+        <div id="placeOrder">
+          <button>PLACE ORDER</button>
+        </div>
       </div>
     </div>
-    </div>-->
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
