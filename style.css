@@ -99,6 +99,10 @@ nav {
   border: 1px solid #dadada;
 }
 
+#mobileLogo {
+  width: 3rem;
+}
+
 .searchAcct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -875,7 +879,7 @@ nav {
     font-weight: bold;
   }
   #desktopNav #desktopLogo img {
-    width: 25%;
+    width: 2rem;
     margin-right: 5px;
   }
   #desktopNav ul {

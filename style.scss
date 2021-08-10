@@ -91,6 +91,10 @@ nav {
   }
 }
 
+#mobileLogo {
+  width: 3rem;
+}
+
 .searchAcct {
   @include flexIt(row, space-between, center);
   width: 15%;
@@ -576,7 +580,7 @@ nav {
     #desktopLogo {
       font-weight: bold;
       img {
-        width: 25%;
+        width: 2rem;
         margin-right: 5px;
       }
     }
